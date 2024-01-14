@@ -3,14 +3,19 @@ export default defineNuxtConfig({
   css: ["assets/scss/index.scss", "@fortawesome/fontawesome-free/css/all.css"],
   modules: [
     // '@nuxt/test-utils/module'
-    // [
-    //   "@pinia/nuxt",
-    //   {
-    //     autoImports: ["defineStore", "acceptHMRUpdate"],
-    //   },
-    // ],
+    [
+      "@pinia/nuxt",
+      "@pinia-plugin-persistedstate/nuxt",
+      {
+        autoImports: ["defineStore", "acceptHMRUpdate"],
+      },
+    ],
   ],
-  // imports: {
-  //   dirs: ["stores"],
-  // },
+  piniaPersistedState: {
+    storage: "localStorage",
+    debug: true,
+  },
+  imports: {
+    dirs: ["stores"],
+  },
 });
