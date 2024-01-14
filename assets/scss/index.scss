@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/bulma.sass";
+
+
+//ーーーーーーーー 全体系 ーーーーーーーーーーーーーーーーーーーーー
+
+
+//ーーーーーーーー bulma調節はここへ ーーーーーーーーーーーーーーーーーーーーー
+// .content {
+//     white-space: pre-wrap;
+// }
+
+
+
+//ーーーーーーーー 共通系のクラスはここへ ーーーーーーーーーーーーーーーーーーーーー
+.basicView {
+  min-height: 82vh;
+}
+
+.content-row-space-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.content-row-space-left-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.content-row-space-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+}
