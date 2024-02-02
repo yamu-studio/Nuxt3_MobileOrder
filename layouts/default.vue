@@ -1,14 +1,11 @@
 <template lang="pug">
 #app
-  Header.header(v-model:buger-active="bugerActive")
+  Header.header
   main.page-content
     slot 
-  //- SideMenu(v-model:buger-active="bugerActive")
-  Footer
+  Footer.footer.p-0
 </template>
-<script setup lang="ts">
-const bugerActive = ref(false);
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 *,
@@ -24,18 +21,30 @@ html {
 }
 .page-content {
   position: relative;
-  // left: 68px;
-  max-width: 92vw;
-  padding-top: 70px;
+  padding-top: 100px;
+  padding-bottom: 160px;
+
+  color: white;
+  background-color: rgb(46, 38, 38);
 }
 .header {
   position: fixed;
 }
-
+.footer {
+  position: fixed;
+  bottom: 0px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+
+  -ms-overflow-style: none;
+  /* Firefox 対応 */
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

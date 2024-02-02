@@ -3,19 +3,59 @@
 @import "../node_modules/bulma/bulma.sass";
 
 
-//ーーーーーーーー 全体系 ーーーーーーーーーーーーーーーーーーーーー
-
-
 //ーーーーーーーー bulma調節はここへ ーーーーーーーーーーーーーーーーーーーーー
-// .content {
-//     white-space: pre-wrap;
-// }
+.button {
+  border-color: hsla(0, 0%, 100%, 0);
+  // border: 0px solid transparent;
+}
 
+.columns {
+  margin: 0px
+}
 
+.title,
+.subtitle {
+  color: white;
+}
+
+.navbar {
+  color: white;
+  background-color: rgb(95, 81, 81);
+}
 
 //ーーーーーーーー 共通系のクラスはここへ ーーーーーーーーーーーーーーーーーーーーー
 .basicView {
   min-height: 82vh;
+}
+
+.isMini {
+  width: 128px;
+}
+
+.contentDetail {
+  width: 100%;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.border-bottom {
+  border-bottom: 3px solid #333;
+  padding: 6px;
+}
+
+.border-bottom-light {
+  border-bottom: 1px solid #333;
+  padding: 6px;
+}
+
+.border-bottom-white {
+  border-bottom: 3px solid #ffffff;
+  padding: 6px;
+}
+
+.border-bottom-white-light {
+  border-bottom: 1px solid #ffffff;
+  padding: 6px;
 }
 
 .content-row-space-left {
@@ -36,6 +76,24 @@
   flex-wrap: nowrap;
 }
 
+.content-row-space-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.content-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+}
+
 .content-row-space-around {
   display: flex;
   flex-direction: row;
@@ -43,4 +101,56 @@
   flex-wrap: wrap;
   align-content: center;
   align-items: flex-start;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+
+.navBerBtn {
+  background-color: rgb(95, 81, 81);
+}
+
+.navBerFooterBtn {
+  background-color: rgb(137, 119, 119);
+}
+
+.is-selected-orange {
+  background-color: #e87625;
+}
+
+.is-selected-white {
+  background-color: #ffffff;
+}
+
+.balloon1-left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 6px 10px;
+  min-width: 120px;
+  max-width: 68vw;
+  color: #000000;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+.balloon1-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #ffffff;
+}
+
+.balloon1-left p {
+  margin: 0;
+  padding: 0;
+}
+
+.orderBtn {
+  background: #e87625;
+  color: white;
 }
